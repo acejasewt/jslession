@@ -1,0 +1,71 @@
+<!Doctype html>
+<head>
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <link rel="stylesheet" href='./css/style.css'>
+    <script src="./js/script.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <img src="./images/background.png" alt="It's a mountain" class="background"></img>
+        <div class='logo'>
+            <img src="./images/diamond.png" alt='diamond' class="diamond"></img>
+            <h1 class="title">HOMEWORK</h1>
+            <p class='content'> I want to show you three kinds of functions in this demo that there <br> are countdown day,water bottle and video.</p>
+        </div>
+        <nav class="function">
+            <ul>
+                <li><a href='#BOTTLE' class='items1' onclick='bottle();'>BOTTLE</a></li>
+                <li><a href='#COUNTDOWN' class='items2' onclick='countdown();'>COUNTDOWN</a></li>
+                <li><a href='#VIDEO' class='items3' onclick='video();'>VIDEO</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class='main1' style='display:none'>
+        <img src="./images/background-2.png" alt="It's a mountain" class="background-2" ></img>
+        <div class='bottle'>
+            <nav class="close">
+                <a href='#' class='close1' onclick="getback1();">x</a>
+            </nav>
+            <div class='effect' onclick='bottle();'>
+                Liquid Effect
+            </div>
+        </div>
+    </div>
+
+    <div class='main2' style='display:none'>
+        <img src="./images/background-2.png" alt="It's a mountain" class="background-2" ></img>
+        <div class="countdownday">
+            <div class="back">
+                <nav class="close">
+                    <a href='#' class='close2' onclick="getback2();">x</a>
+                </nav>
+                <h2><span>Countdown to New Year</span> 2022</h2>
+                <div class="countdown" onclick="countdown">
+                    <div id="day"></div>
+                    <div id="hour"></div>
+                    <div id="minute"></div>
+                    <div id="second"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class='main3' style='display:none'>
+        <img src="./images/background-2.png" alt="It's a mountain" class="background-2" ></img>
+        <div class='video'>
+            <div class="trailer">
+                <video src="./FBDT.mp4" controls='true' autoplay='true'></video>
+            </div>
+            <nav class="close">
+                <a href='#' class='close3' onclick="getback3();">x</a>
+            </nav>
+        </div>
+    </div>
+
+
+</body>

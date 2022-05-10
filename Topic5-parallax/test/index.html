@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="images/stars.png" id="stars">
+        <img src="images/moon.png" id="moon">
+        <img src="images/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Luka Doncic</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="images/mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Luka Doncic Win!</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet illo quidem, architecto incidunt quae ratione veniam cum recusandae natus temporibus quas fugiat eos quis alias deleniti similique atque aperiam sunt!<br><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis accusantium libero mollitia? Dolore tempora soluta dolorum perferendis a provident magni maiores est atque tempore commodi, odio deserunt assumenda rem! Magni.
+        Praesentium culpa accusamus voluptatibus numquam necessitatibus aspernatur ipsa a? Magnam veritatis sed necessitatibus maiores! Dolorum explicabo, tempora repellendus modi sunt esse et sed impedit! Commodi laboriosam repudiandae nisi vero vel.<br><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, perferendis aperiam. Atque recusandae alias, distinctio sed consequuntur soluta quae corporis, vel, consectetur inventore animi! Provident vitae facere dolor consectetur laboriosam.<br><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quos fugiat odit praesentium perferendis quae dicta, vero provident? Voluptate, harum.<br><br>
+        </p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+
+            stars.style.left = value*0.25 + "px";
+            moon.style.top = value*1.05 + "px";
+            mountains_behind.style.top = value*0.5 + "px";
+            mountains_front.style.top = value*0 + "px";
+            text.style.marginRight = value*4 + "px";
+            text.style.marginTop = value*1.5 + "px";
+            btn.style.marginTop = value*1.5 + "px";
+            header.style.top = value*0.5 + "px";
+        })
+
+    </script>
+</body>
+</html>

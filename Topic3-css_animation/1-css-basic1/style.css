@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+}
+/* Before & After Intro */
+.firstdiv::before{
+    content: "div before";
+    color: red;
+} 
+.firstdiv::after{
+    content: "div after";
+    color: blue;
+}
+
+/* Second */
+.second{
+    width: 400px;
+    height: 400px;
+    background: url(headphone4.jpg);
+    position: relative;
+}
+.second::before{
+    content: "Headphone";
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    opacity: 0;
+    transition: .5s;
+    mix-blend-mode: lighten;
+    cursor: pointer;
+}
+.second:hover::before{
+    opacity: .8;
+}
+
+/* Third */
+.thirddiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+.transformbox{
+    width: 35%;
+}
+.imgbox{
+    overflow: hidden;
+    border: 1px solid #000;
+}
+.transformbox:nth-child(1) .imgbox img{
+    transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0);
+}
+.transformbox:nth-child(2) .imgbox img{
+    transform: translate(12px, 50%);
+}
+.transformbox:nth-child(3) .imgbox img{
+    transform: translateX(2em);
+}
+.transformbox:nth-child(4) .imgbox img{
+    transform: rotate(0.5turn);
+}
+.transformbox:nth-child(5) .imgbox img{
+    transform: rotateX(50deg);
+}
+.transformbox:nth-child(6) .imgbox img{
+    transform: rotateY(50deg);
+}
+.transformbox:nth-child(7) .imgbox img{
+    transform: scale(2, 0.5);
+}
+.transformbox:nth-child(8) .imgbox img{
+    transform: scaleX(2);
+}
+.transformbox:nth-child(9) .imgbox img{
+    transform: skew(30deg, 20deg);
+}

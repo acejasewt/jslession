@@ -1,0 +1,68 @@
+html, body,div{
+  width:100%;
+  height:100%;
+  max-height:880px;
+  overflow:hidden;
+  background:#000;
+  position:absolute;
+  z-index:-2;
+}
+
+.loading{
+  position: absolute;
+  width:100%;
+  height:100vh;
+  background:#B08D74;
+  top: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index:3;
+}
+
+.loading h1{
+  font-size: 100px;
+  letter-spacing: 20px;
+  color: #ffffff;
+}
+
+.title{
+  position: absolute;
+  color: #ffffff;
+  font-size:30px;
+  top:70px;
+  left:80px;
+}
+
+.article{
+  position: absolute;
+  color: #ffffff;
+  top:150px;
+  left:80px;
+}
+
+#ig{
+  position: absolute;
+  width:50px;
+  height:50px;
+  top:450px;
+  left: 100px;
+}
+
+#fb{
+  position: absolute;
+  width:50px;
+  height:50px;
+  top:450px;
+  left: 200px;
+}
+
+#yt{
+  position: absolute;
+  width:50px;
+  height:50px;
+  top:450px;
+  left: 300px;
+}
+

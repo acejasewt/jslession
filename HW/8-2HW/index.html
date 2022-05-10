@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--<link rel="stylesheet" href="/Work/8-2HW/css/style.css">-->
+</head>
+<body>
+    <section>
+        <img src="images/parallax0@2x.png" id='zero'>
+        <img src='images/parallax1@2x.png' id='one'>
+        <img src='images/parallax2@2x.png' id='two'>
+        <img src="images/parallax3@2x.png" id=three>
+        <img src="images/parallax4@2x.png" id='four'>
+        <img src="images/parallax5@2x.png" id='five'>
+        <img src="images/parallax6@2x.png" id='six'>
+        <img src="images/parallax7@2x.png" id='seven'>
+        <img src="images/parallax8@2x.png" id='eight'>
+    </section>
+    <div class="content">
+        <h2>AVAILABLE NOW FOR $19.99</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br><br>
+            Dolorem rem ex libero perspiciatis sunt. <br><br>
+            Architecto commodi ipsum officiis eius asperiores nihil nobis eligendi corporis sit fugiat, <br><br>
+            quibusdam voluptatibus corrupti sequi!<br><br>
+        </p>
+    </div>
+    <script>
+        let zero=document.getElementById('zero');
+        let one=document.getElementById('one');
+        let two=document.getElementById('two');
+        let three=document.getElementById('three');
+        let four=document.getElementById('four');
+        let five=document.getElementById('five');
+        let six=document.getElementById('six');
+        let seven=document.getElementById('seven');
+        let eight=document.getElementById('eight');
+        
+        window.addEventListener('scroll',function(){
+            let value=window.scrollY;
+
+            zero.style.top=value*0.9+'px';
+            one.style.top=value*0.9+'px';
+            two.style.top=value*0.8+'px';
+            three.style.top=value*0.8+'px';
+            four.style.top=value*0.9+'px';
+            five.style.top=value*0.6+'px';
+            six.style.top=value*0.5+'px';
+            seven.style.top=value*0.6+'px';
+            eight.style.top=value*0+'px';
+
+        })
+    </script>
+</body>
+</html>

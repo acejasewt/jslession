@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *,*::before,*::after {
+        box-sizing: border-box;
+    }
+    body {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        min-height: 100vh;
+        background: #222;
+    }
+    .box {
+        position: relative;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 6px;
+        background-color: #6fb936;
+    }
+    .btns {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 5px;
+    }
+    button {
+        margin-bottom: 5px;
+    }
+
+</style>
+<body>
+    <div class="btns">
+        <button id="play">播放</button>
+        <button id="pause">暂停</button>
+        <button id="resume">繼續</button>
+        <button id="restart">重新開始</button>
+        <button id="paused">繼續/繼續</button>
+        <button id="reverse">反轉播放</button>
+        <button id="reversed">反轉切換</button>
+        <button id="seek">跳至2秒</button>
+    </div>
+    <div class="box"></div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script>
+        console.clear();
+
+        const myAnimation = gsap.to('.box', {
+        duration: 5,
+        paused: true,
+        left: 'calc(100% - 50px)',
+        });
+
+        document.querySelector("#play").addEventListener('click',() => myAnimation.play());
+        document.querySelector("#pause").addEventListener('click',() => myAnimation.pause());
+        document.querySelector("#resume").addEventListener('click',() => myAnimation.resume());
+        document.querySelector("#restart").addEventListener('click',() => myAnimation.restart());
+        document.querySelector("#paused").addEventListener('click',() => myAnimation.paused(!myAnimation.paused()));
+        document.querySelector("#reverse").addEventListener('click',() => myAnimation.reverse());
+        document.querySelector("#reversed").addEventListener('click',() => myAnimation.reversed(!myAnimation.reversed()));
+        document.querySelector("#seek").addEventListener('click',() => myAnimation.seek(2));
+    </script>
+</body>
+</html>

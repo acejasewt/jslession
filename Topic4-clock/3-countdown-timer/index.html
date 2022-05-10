@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="download-container">
+        <a href="#" class="download-btn">Download Files <i class="fas fa-download"></i></a>
+        <div class="countdown"></div>
+        <div class="pleasewait-text">Please wait...</div>
+        <div class="manual-download">If the download didn't start automatically, <a href="#" class="download-link">Click here.</a></div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script>
+        const downloadbtn = document.querySelector(".download-btn");
+        const countdown = document.querySelector(".countdown");
+        const pleasewait = document.querySelector(".pleasewait-text");
+        const manualdownload = document.querySelector(".manual-download");
+        const dowloadlink = document.querySelector(".download-link");
+
+        var timeleft = 10;
+
+        downloadbtn.addEventListener("click",()=>{
+            downloadbtn.style.display = "none";
+            countdown.innerHTML = "Download will begin automatically in <span>" + timeleft + "</span> seconds.";
+
+            var downloadtimer = setInterval(function timecount(){
+                timeleft -- ;
+                countdown.innerHTML = "Download will begin automatically in <span>" + timeleft + "</span> seconds.";
+                if (timeleft <= 0){
+                    clearInterval(downloadtimer);
+                    pleasewait.style.display = "block";
+                    // let link_href = "/file:///Users/jasewt/Desktop/JS%20Lession/Topic4-clock/testans-countdown-timer/bg.jpeg";
+                    // window.location.href = link_href;
+                    // downloadlink.href = link_href
+
+                    setTimeout(()=>{
+                        pleasewait.style.display = "none";
+                        manualdownload.style.display = "block";
+                    },4000)
+                }
+            },1000);
+        });
+    </script>
+</body>
+</html>

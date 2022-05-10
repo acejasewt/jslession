@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop out</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="btn" onclick="popupToggle();">Click This</a>
+    <div id="popup">
+        <div class="content">
+            <img src="email.png">
+            <h2>Join Our Community</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus autem cupiditate quidem dolor a illo necessitatibus? Reiciendis, numquam vero. Similique at dolores odit, fuga quo quod? Temporibus atque ea suscipit!</p>
+            <div class="inputbox">
+                <input type="email" placeholder="Enter Email">
+            </div>
+            <div class="inputbox">
+                <input type="submit" value="Sign Up">
+            </div>
+        </div>
+        <a class="close" onclick="popupToggle();"><img src="cancel.png"></a>
+    </div>
+    <script>
+        function popupToggle(){
+            const popup = document.getElementById('popup');
+            popup.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
